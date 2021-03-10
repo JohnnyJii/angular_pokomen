@@ -1,0 +1,18 @@
+<div class="login-container">
+  <img id="logo" src="../../../assets//pokemon-logo.png" alt="" srcset="" />
+
+  <div class="login-card">
+    <form>
+      <div>
+        <input
+          [(ngModel)]="trainer.username"
+          type="text"
+          placeholder="Enter Username"
+          name="username"
+          required
+        />
+        <button type="button" (click)="onUsernameEntered()">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

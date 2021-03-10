@@ -1,0 +1,24 @@
+.pokemons-container {
+  border-width: 2px;
+  border-style: solid;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  height: 100%;
+  align-items: center;
+
+  .pokemon-wrapper {
+    flex: 0 0 25%;
+    img {
+      max-width: 25px;
+      position: relative;
+      top: 55px;
+      z-index: 3;
+      left: 173px;
+      cursor: pointer;
+    }
+  }
+}

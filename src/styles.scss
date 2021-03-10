@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+
+:after,
+:before {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
+}
+
+body {
+  background: white;
+  background: linear-gradient(to right, #d0ece7, #edeed8);
+}

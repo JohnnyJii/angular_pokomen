@@ -1,0 +1,110 @@
+<app-navbar></app-navbar>
+
+<div *ngIf="loading; else done_Loading">loading....</div>
+
+<ng-template #done_Loading>
+  <div class="pokemon-details">
+    <div class="pokemon-details-header">
+      <section>
+        <h1>
+          {{ pokemonDetails.name }}
+          <span
+            [ngStyle]="{
+              color: species.color === undefined ? '' : species.color.name
+            }"
+          >
+            #{{ pokemonDetails.id }}
+          </span>
+        </h1>
+      </section>
+
+      <div class="save-pokemon-icon">
+        <img
+          (click)="onSavePokemon()"
+          *ngIf="!isAlreadySaved"
+          src="../../../../assets/save-icon.png"
+          alt=""
+          srcset=""
+        />
+
+        <p *ngIf="isAlreadySaved">Saved.</p>
+      </div>
+    </div>
+
+    <div class="pokemon-details-info">
+      <img [src]="pokemonImage" alt="" />
+
+      <div>
+        <div style="margin-bottom: 10px">
+          <p *ngFor="let val of species.flavor_text_entries; let index = index">
+            <span *ngIf="val.language.name === 'en' && index < 1">{{
+              val.flavor_text
+            }}</span>
+          </p>
+        </div>
+
+        <div class="pokemon-details-stats">
+          <div>
+            <h3>Weight</h3>
+            <p>{{ pokemonDetails.weight }} lbs</p>
+          </div>
+          <div>
+            <h3>Height</h3>
+            <p>{{ pokemonDetails.height }}'</p>
+          </div>
+          <div style="margin-bottom: 10px">
+            <h3>Abilities</h3>
+            <p *ngFor="let val of pokemonDetails.abilities; let index = index">
+              {{ val.ability.name }}
+            </p>
+          </div>
+          <div>
+            <h3>Base Experience</h3>
+            <p>{{ pokemonDetails.base_experience }}</p>
+          </div>
+          <div style="margin-bottom: 10px">
+            <h3>Stats</h3>
+            <p *ngFor="let val of pokemonDetails.stats; let index = index">
+              {{ val.stat.name }} : {{ val.base_stat }}
+            </p>
+          </div>
+
+          <div style="margin-bottom: 10px; flex: 1 0 100%">
+            <h3>Moves</h3>
+            <section style="display: flex; flex-flow: row wrap">
+              <p *ngFor="let val of pokemonDetails.moves; let index = index">
+                {{ val.move.name }}
+              </p>
+            </section>
+          </div>
+          <div style="margin-bottom: 10px">
+            <h3>Types</h3>
+            <p *ngFor="let val of pokemonDetails.types; let index = index">
+              {{ val.type.name }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="species-info-header">Species Info:</h2>
+
+      <div class="species-info">
+        <div style="margin-bottom: 10px">
+          <h3>Egg Group</h3>
+          <p *ngFor="let val of species.egg_groups; let index = index">
+            {{ val.name }}
+          </p>
+        </div>
+
+        <div>
+          <h3>Habitat</h3>
+          <p>{{ species.habitat.name }}</p>
+        </div>
+        <div>
+          <h3>Shape</h3>
+          <p>{{ species.shape.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

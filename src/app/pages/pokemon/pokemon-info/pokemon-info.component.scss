@@ -1,0 +1,111 @@
+.pokemon-details {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: #b9262669;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  padding: 2rem;
+
+  .pokemon-details-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    section {
+      margin: 0 auto;
+    }
+    img {
+      max-width: 50px;
+    }
+  }
+
+  h1 {
+    span {
+      border-radius: 10px;
+      padding: 3px 10px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  img {
+    margin-right: 2rem;
+    min-width: 0;
+    max-width: 300px;
+    align-self: flex-start;
+  }
+
+  .pokemon-details-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    > div {
+      flex: 1 1 60.8%;
+      margin-top: 4rem;
+    }
+    .pokemon-details-stats {
+      background-color: #30a7d7;
+      color: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-top: 20px;
+
+      display: flex;
+      flex-flow: row wrap;
+
+      div {
+        margin-left: 10px;
+        margin-right: 30px;
+        flex-grow: 0;
+        flex-basis: 25%;
+        margin-top: 10px;
+
+        section {
+          p {
+            flex: 1 0 25%;
+            margin-bottom: 10px;
+          }
+        }
+
+        h3 {
+          color: #fff;
+        }
+        p {
+          color: black;
+          margin-top: 5px;
+        }
+      }
+    }
+
+    #species-info-header {
+      margin-top: 20px;
+    }
+    .species-info {
+      margin-top: 0;
+      border-top-style: solid;
+      border-top-width: 1px;
+      padding-top: 10px;
+      flex: 1 0 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      div {
+        padding-right: 6rem;
+        padding-left: 6rem;
+      }
+    }
+  }
+}
+
+.save-pokemon-icon {
+  cursor: pointer;
+  img {
+    &:hover {
+      transform: scale(1.4);
+    }
+  }
+}

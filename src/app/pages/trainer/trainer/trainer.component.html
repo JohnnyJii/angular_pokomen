@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+
+<div class="pokemons-container">
+  <div
+    *ngFor="let pokemon of pokemons; let index = index"
+    class="pokemon-wrapper"
+  >
+    <img
+      (click)="onDeletePokemon(pokemon)"
+      src="../../../../assets/remove-icon.png"
+      alt=""
+      srcset=""
+    />
+    <app-pokemon-card
+      [pokemon]="pokemon"
+      (onChangeRoute)="onPokemonClicked($event)"
+    ></app-pokemon-card>
+  </div>
+</div>

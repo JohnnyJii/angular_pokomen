@@ -1,0 +1,11 @@
+.pokemons-container {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: #b9262669;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
