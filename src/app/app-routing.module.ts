@@ -7,6 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './guards/auth/auth.guard';
 import { IsLoggedInResolver } from './guards/auth/isLoggedin-resolver';
 
+//define routes to be used
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   {

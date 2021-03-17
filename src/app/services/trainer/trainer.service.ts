@@ -17,6 +17,7 @@ export class TrainerService {
     return this.getLocalStorage('trainer') !== null;
   }
 
+  // check if pokemon is stored
   isPokemonStored(pokemonId: number): boolean {
     const trainer = this.getLocalStorage('trainer');
     const pokemon = trainer.pokemonsCollected.find((p) => p.id === pokemonId);
@@ -24,6 +25,7 @@ export class TrainerService {
     return pokemon !== undefined || null;
   }
 
+  // add pokemon to user
   addPokemonToUser(pokemon): void {
     if (this.isLoggedIn()) {
       const data = this.getLocalStorage('trainer');
@@ -32,6 +34,7 @@ export class TrainerService {
     }
   }
 
+  //deklete pokemon from user
   deletePokemonFromUser(pokemon) {
     if (this.isLoggedIn()) {
       let store = this.getLocalStorage('trainer');
@@ -42,6 +45,7 @@ export class TrainerService {
     }
   }
 
+  //setting up locastorage
   getLocalStorage(key) {
     return JSON.parse(localStorage.getItem(key));
   }

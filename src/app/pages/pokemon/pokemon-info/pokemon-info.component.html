@@ -22,12 +22,13 @@
         <img
           (click)="onSavePokemon()"
           *ngIf="!isAlreadySaved"
-          src="../../../../assets/save-icon.png"
+          src="../../../../assets/catch.png"
           alt=""
           srcset=""
+          
         />
 
-        <p *ngIf="isAlreadySaved">Saved.</p>
+        <p *ngIf="isAlreadySaved">Caught!</p>
       </div>
     </div>
 

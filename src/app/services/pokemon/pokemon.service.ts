@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-// Get all Pokemons & get individual pokemons by url/id...
+// Get pokemons from api
 
 @Injectable({
   providedIn: 'root',

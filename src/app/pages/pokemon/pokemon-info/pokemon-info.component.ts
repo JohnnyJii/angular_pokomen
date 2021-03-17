@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 import { PokemonService } from '../../../services/pokemon/pokemon.service';
 import { TrainerService } from '../../../services/trainer/trainer.service';
+
 
 @Component({
   selector: 'app-pokemon-info',
@@ -10,7 +10,7 @@ import { TrainerService } from '../../../services/trainer/trainer.service';
   styleUrls: ['./pokemon-info.component.scss'],
 })
 
-// Check if User is logged in. If he/she isn't, redirect to login page.
+// Check if User is logged in. if not, redirect to loginpage.
 // If logged in, show a specific Pokemon together with its stats, by
 // accessing path variable in this page. Ex: /{id}.
 export class PokemonInfoComponent implements OnInit {
@@ -56,6 +56,7 @@ export class PokemonInfoComponent implements OnInit {
       .catch((err) => console.log(err));
   }
 
+  // when pokemon is saved, add to user
   onSavePokemon() {
     this.trainerService.addPokemonToUser({
       id: this.pokemonDetails.id,

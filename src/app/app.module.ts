@@ -12,6 +12,7 @@ import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.com
 import { IsLoggedInResolver } from './guards/auth/isLoggedin-resolver';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

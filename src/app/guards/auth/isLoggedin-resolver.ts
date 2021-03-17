@@ -6,9 +6,7 @@ import { TrainerService } from 'src/app/services/trainer/trainer.service';
 export class IsLoggedInResolver implements Resolve<any> {
   constructor(private router: Router, private trainerService: TrainerService) {}
 
-  /**
-   * If user is already logged in, we redirect from login page to /pokemons.
-   */
+  // if user logged in, then redirect to pokemons
   resolve(): void {
     if (this.trainerService.isLoggedIn()) {
       this.router.navigateByUrl('/pokemons');

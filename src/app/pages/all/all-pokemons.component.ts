@@ -8,8 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./all-pokemons.component.scss'],
 })
 
-// Check if User is logged in. If he/she isn't, redirect to login page.
-// Otherwise display all Pokemons.
+// Check if User is logged in. If not, redirect to login page.
 export class AllPokemonsComponent implements OnInit {
   public pokemons: any = [];
   private IMAGE_BASE_URL: string =
@@ -35,7 +34,7 @@ export class AllPokemonsComponent implements OnInit {
       console.log(error);
     }
   }
-
+  
   onPokemonClicked(pokemon) {
     this.router.navigateByUrl('/pokemons/' + pokemon.id);
   }
