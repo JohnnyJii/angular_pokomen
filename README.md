@@ -51,3 +51,4 @@ Jukka Juntunen
 # Angular_pokemon
 # angular_privat
 # angular_privat
+# angular_pokomen
